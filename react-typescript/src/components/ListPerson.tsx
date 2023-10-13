@@ -1,8 +1,7 @@
-type listPersonProps = {
-    names:{
-        first: string
-        last: string
-    }[]
+import { Name } from "./Person.types"
+
+export type listPersonProps = {
+    names: Name[]
 }
 
 export const ListPerson = (props: listPersonProps) => {
@@ -12,7 +11,7 @@ export const ListPerson = (props: listPersonProps) => {
             {props.names.map((name) =>{
                 return(
                     <div>
-                        <h3>{name.first} {name.last}</h3>
+                        <h3>{name.firstName} {name.lastName}</h3>
                     </div>
                 )
             })}
