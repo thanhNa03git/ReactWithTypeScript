@@ -1,43 +1,22 @@
 import React from 'react';
 import './App.css';
-import { Hello } from './components/Hello';
-import { Person } from './components/Person';
-import { ListPerson } from './components/ListPerson';
-import { Status } from './components/Status';
-import { Heading } from './components/Heading';
-import { Oscar } from './components/Oscar';
-
+import { Button } from './components/Button';
+import { Input } from './components/Input';
+import { Container } from './components/Container';
 
 function App() {
-    const personName = {
-      firstName: 'Khang',
-      lastName: 'le'
-    }
-    const names = [
-      {
-        first: 'nguyen',
-        last: 'hieu'
-      },
-      {
-        first: 'tran',
-        last: 'tien'
-      },
-      {
-        first: 'le',
-        last: 'khang'
-      }
-    ]
 
   return (
     <div className="App">
-      <Hello name = 'Thanh Na' age = {20} isLogged = {false} />
-      <Person name = {personName} />
-      <ListPerson names={names} />
-      <Status status='sairoi' />
-      <Heading>Place Holder text </Heading>
-      <Oscar>
-        <Heading>Oscar goes to Jack 5 cu</Heading>
-      </Oscar>
+      <Button 
+        handlerClick={(event,id) =>{
+          console.log("button clicked", event, id)
+        }}
+      />
+      <Input value='' handlerChange={(event) =>{
+        console.log(event)
+      }}/>
+      <Container style={{color: 'rebeccapurple', border: '1px solid red'}}/>
     </div>
   );
 }
