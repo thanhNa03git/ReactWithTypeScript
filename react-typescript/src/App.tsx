@@ -4,6 +4,8 @@ import { LoggedIn } from './components/state/LoggedIn';
 import { Counter } from './components/state/Counter';
 import { User } from './components/state/User';
 import { Reducer } from './components/state/Reducer';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { Box } from './components/context/Box';
 
 
 function App() {
@@ -18,6 +20,10 @@ function App() {
       <Reducer/>
       <h2 style={{color:'red'}}>How to use hook useReducer advanced</h2>
       <Counter/>
+      <h2 style={{color:'red'}}>How to use hook useContext</h2>
+      <ThemeContextProvider>
+        <Box/>
+      </ThemeContextProvider>
     </div>
   );
 }
