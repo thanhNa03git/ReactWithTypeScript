@@ -1,9 +1,4 @@
-// import { ThemeContext } from "./ThemeContext"
-// import { useContext } from "react"
-
 export const Paragraph = () => {
-
-    // const theme = useContext(ThemeContext)
     return (
         <>
             <p style={{textAlign:'justify', padding: '2rem'}}>Context giúp chia sẻ dữ liệu giữa các thành phần con mà không cần truyền props qua nhiều cấp.
