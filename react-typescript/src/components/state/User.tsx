@@ -6,18 +6,18 @@ type Author = {
 }
 
 export const User = (props: Author) =>{
-    const [loggedIn, setLoggIn] = useState<Author | null>(null);
+    const [loggedIn, setLogIn] = useState<Author | null>(null);
     
-    const handlerLoggIn = () => {
-        setLoggIn({
+    const handlerLogIn = () => {
+        setLogIn({
             name: props.name,
             email: props.email,
             phone: props.phone
         });
         console.log(loggedIn)
     }
-    const handlerLoggOut = () => {
-        setLoggIn(null)
+    const handlerLogOut = () => {
+        setLogIn(null)
         console.log(loggedIn)
     }
     return(
@@ -25,8 +25,8 @@ export const User = (props: Author) =>{
         <h3>User Name is {loggedIn?.name}</h3>
         <h3>Your email is {loggedIn?.email}</h3>
         <h3>Your phone is {loggedIn?.phone}</h3>
-        <button onClick={handlerLoggIn}>LoggIn</button>
-        <button onClick={handlerLoggOut}>LoggOut</button>
+        <button onClick={handlerLogIn}>LogIn</button>
+        <button onClick={handlerLogOut}>LogOut</button>
         
         </>
     )

@@ -1,16 +1,20 @@
-import { useContext } from "react"
-import { ThemeContext } from "./ThemeContext"
+// import { ThemeContext } from './ThemeContext';
+import { useState } from "react";
+import './theme.css';
+import { Paragraph } from "./Paragraph";
 
 export const Box = () => {
-    const theme = useContext(ThemeContext)
-    // const hanlderChangeTheme = () =>{}
+    const [changeTheme, setChangeTheme] = useState('dark')
+
+    const toggleTheme =() =>{
+        setChangeTheme(changeTheme ==='dark'?'light':'dark')
+        console.log('changeTheme: ', changeTheme);  
+    }
     return (
         < >
-        {/* <button onClick={hanlderChangeTheme}>Change Theme</button> */}
-            <div style={{backgroundColor: theme.primary.main, 
-                color: theme.primary.text,
-                height: '20rem'}}>
-                Theme context
+            <div className={changeTheme} style={{height: '20rem'}}>
+                <button onClick={toggleTheme}>toggle theme</button>
+                <Paragraph/>
             </div>
         </>
     )

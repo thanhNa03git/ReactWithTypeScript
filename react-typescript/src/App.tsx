@@ -1,9 +1,5 @@
 import React from 'react';
 import './App.css';
-import { LoggedIn } from './components/state/LoggedIn';
-import { Counter } from './components/state/Counter';
-import { User } from './components/state/User';
-import { Reducer } from './components/state/Reducer';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
 
@@ -11,19 +7,13 @@ import { Box } from './components/context/Box';
 function App() {
 
   return (
-    <div className="App" style={{padding: 10}}>
-      <h2 style={{color:'red'}}>How to use hook useState</h2>
-      <LoggedIn/>
-      <h2 style={{color:'red'}}>How to use hook useState more than 1 type</h2>
-      <User name='Thanh Na' email='a@gmail.com' phone={915304750}/>
-      <h2 style={{color:'red'}}>How to use hook useReducer</h2>
-      <Reducer/>
-      <h2 style={{color:'red'}}>How to use hook useReducer advanced</h2>
-      <Counter/>
-      <h2 style={{color:'red'}}>How to use hook useContext</h2>
-      <ThemeContextProvider>
-        <Box/>
-      </ThemeContextProvider>
+    <div className="App" style={{ padding: 10 }}>
+      
+      <h2 style={{ color: 'red' }}>How to use hook useContext</h2>
+      {/* <ThemeContextProvider> */}
+        <Box />
+      {/* </ThemeContextProvider> */}
+
     </div>
   );
 }
